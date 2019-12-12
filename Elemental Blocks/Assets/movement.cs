@@ -5,6 +5,7 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
 public float playerSpeed = 5.0f;
+float stop = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +16,6 @@ public float playerSpeed = 5.0f;
     void Update()
     {
         transform.Translate(playerSpeed * Time.deltaTime, 0f, 0f);
+        transform.rotation = Quaternion.Euler(stop, stop, stop);
     }
 }
