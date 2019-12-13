@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class fire : MonoBehaviour
 {
+public GameObject obstacle;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +16,11 @@ public class fire : MonoBehaviour
     {
         
     }
+     private void OnTriggerEnter(Collider other) {
+     if (other.gameObject.tag == "Player")
+     {
+     Destroy(obstacle);
+     Destroy(gameObject);
+     }
+     }
 }
