@@ -6,6 +6,8 @@ TagManager:
   tags:
   - ground
   - spike
+  - shield
+  - earth
   layers:
   - Default
   - TransparentFX
